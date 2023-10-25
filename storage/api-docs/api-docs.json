@@ -1,0 +1,4177 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Technical Test JARIVIS - IQBAL IKHLASUL AMAL",
+        "contact": {
+            "name": "Iqbal Ikhlasul Amal",
+            "email": "iqbaliamal@gmail.com"
+        },
+        "license": {
+            "name": "MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/alokasi-waktu/list": {
+            "get": {
+                "tags": [
+                    "Alokasi Waktu"
+                ],
+                "summary": "Retrieve all alokasi-waktus",
+                "operationId": "e7b6925b6531af3ea6300dfa6a3b7b11",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/alokasi-waktu/store": {
+            "post": {
+                "tags": [
+                    "Alokasi Waktu"
+                ],
+                "summary": "Create a new alokasi-waktu",
+                "operationId": "b941f0931740ead5f21e18151b296155",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/alokasi-waktu/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Alokasi Waktu"
+                ],
+                "summary": "Retrieve a alokasi-waktu",
+                "operationId": "0d59197f728ad9c896ddfe275703b2f3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "alokasi-waktu ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/alokasi-waktu/update/{id}": {
+            "put": {
+                "tags": [
+                    "Alokasi Waktu"
+                ],
+                "summary": "Update a alokasi-waktu",
+                "operationId": "b58d6d01f993d7a32d8043b218bdca58",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "alokasi-waktu ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/alokasi-waktu/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Alokasi Waktu"
+                ],
+                "summary": "Delete a alokasi-waktu",
+                "operationId": "adf15f5393701061fd887050edd49957",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "alokasi-waktu ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/auth/login": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Authenticate user and generate JWT token",
+                "operationId": "535ffeda4b78916efd658b2844ea897a",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "User's email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "User's password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login successful"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Register a new user",
+                "operationId": "da8643013c2941f5ed7f8a9c9b4a7f7a",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "User's name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "User's email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "User's password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User registered successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/auth/logout": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Logout user",
+                "operationId": "46f8a14c8083abb69eed72768aa08629",
+                "responses": {
+                    "200": {
+                        "description": "Logout successful"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/auth/refresh": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Refresh JWT token",
+                "operationId": "f3538b6e9c46bcf601a9d194288b03d4",
+                "responses": {
+                    "200": {
+                        "description": "Token refreshed successfully"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/auth/user-profile": {
+            "get": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Get user profile",
+                "operationId": "61d687437f701c5dafeb6adccf381d3d",
+                "responses": {
+                    "200": {
+                        "description": "User profile retrieved successfully"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/murid-terbanyak": {
+            "get": {
+                "tags": [
+                    "TEST CASE QUERY"
+                ],
+                "summary": "Retrieve murid terbanyak",
+                "operationId": "95227204cba5967061d275712f4adcb2",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik-terbanyak": {
+            "get": {
+                "tags": [
+                    "TEST CASE QUERY"
+                ],
+                "summary": "Retrieve jadwal pendidik terbanyak",
+                "operationId": "0513c61901b571056b36ff8d5f456c62",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik/list": {
+            "get": {
+                "tags": [
+                    "Jadwal Pendidik"
+                ],
+                "summary": "Retrieve all jadwal-pendidiks",
+                "operationId": "a6db3fd6f6c15a331f353c9f411cc85c",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik/store": {
+            "post": {
+                "tags": [
+                    "Jadwal Pendidik"
+                ],
+                "summary": "Create a new jadwal-pendidik",
+                "operationId": "ad11fda5921f40d66cd94de5e5e4edfc",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "user_id",
+                                    "mata_pelajaran_id",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "user_id": {
+                                            "type": "string"
+                                        },
+                                        "mata_pelajaran_id": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Jadwal Pendidik"
+                ],
+                "summary": "Retrieve a jadwal-pendidik",
+                "operationId": "9e8dfcec873d1a4a30f0ac5e27651b7b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jadwal-pendidik ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik/update/{id}": {
+            "put": {
+                "tags": [
+                    "Jadwal Pendidik"
+                ],
+                "summary": "Update a jadwal-pendidik",
+                "operationId": "9189a358288f6d6fe38904bcf4f4d560",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jadwal-pendidik ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "user_id",
+                                    "mata_pelajaran_id",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "user_id": {
+                                            "type": "string"
+                                        },
+                                        "mata_pelajaran_id": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jadwal-pendidik/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Jadwal Pendidik"
+                ],
+                "summary": "Delete a jadwal-pendidik",
+                "operationId": "beb863c8bf8ffb5b79259391fc6b0fe4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jadwal-pendidik ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jenis-mata-pelajaran/list": {
+            "get": {
+                "tags": [
+                    "Jenis Mata Pelajaran"
+                ],
+                "summary": "Retrieve all jenis-mata-pelajarans",
+                "operationId": "7468577e0e9adc3578fe7281f30fb653",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jenis-mata-pelajaran/store": {
+            "post": {
+                "tags": [
+                    "Jenis Mata Pelajaran"
+                ],
+                "summary": "Create a new jenis-mata-pelajaran",
+                "operationId": "d11cb11713807b43efc96d1a963b07c6",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jenis-mata-pelajaran/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Jenis Mata Pelajaran"
+                ],
+                "summary": "Retrieve a jenis-mata-pelajaran",
+                "operationId": "37d4333e01b8c4e6aec82fe91a39b664",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jenis-mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jenis-mata-pelajaran/update/{id}": {
+            "put": {
+                "tags": [
+                    "Jenis Mata Pelajaran"
+                ],
+                "summary": "Update a jenis-mata-pelajaran",
+                "operationId": "8ea004c7b81e293b796a71fcd74db340",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jenis-mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/jenis-mata-pelajaran/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Jenis Mata Pelajaran"
+                ],
+                "summary": "Delete a jenis-mata-pelajaran",
+                "operationId": "e7969d680013ed9e0f8d129a531b06cb",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "jenis-mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kelas/list": {
+            "get": {
+                "tags": [
+                    "Kelas"
+                ],
+                "summary": "Retrieve all kelass",
+                "operationId": "981e889bd11ac0662c55e66cdad54963",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kelas/store": {
+            "post": {
+                "tags": [
+                    "Kelas"
+                ],
+                "summary": "Create a new kelas",
+                "operationId": "a903e95839237566754178321c6165a9",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kelas/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Kelas"
+                ],
+                "summary": "Retrieve a kelas",
+                "operationId": "ee56dd02013d1f0d53bbffcdd162c589",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kelas/update/{id}": {
+            "put": {
+                "tags": [
+                    "Kelas"
+                ],
+                "summary": "Update a kelas",
+                "operationId": "1771018f2c517792672de122af44c091",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kelas/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Kelas"
+                ],
+                "summary": "Delete a kelas",
+                "operationId": "3de61a0aed3ae501427f5a02a89e686d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar/list": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dasar"
+                ],
+                "summary": "Retrieve all kelass",
+                "operationId": "892e1f13c4c828f945b32993271ffbd3",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar/store": {
+            "post": {
+                "tags": [
+                    "Kompetensi Dasar"
+                ],
+                "summary": "Create a new kompetensi-dasar",
+                "operationId": "9a9e2cc2ead1f9ac0db6dde06b547452",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "silabus_id",
+                                    "materi_pokok",
+                                    "description",
+                                    "kegiatan_pembelajaran",
+                                    "sumber_belajar",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "silabus_id": {
+                                        "type": "string"
+                                    },
+                                    "materi_pokok": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "kegiatan_pembelajaran": {
+                                        "type": "string"
+                                    },
+                                    "sumber_belajar": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "silabus_id": {
+                                            "type": "string"
+                                        },
+                                        "materi_pokok": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "kegiatan_pembelajaran": {
+                                            "type": "string"
+                                        },
+                                        "sumber_belajar": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dasar"
+                ],
+                "summary": "Retrieve a kompetensi-dasar",
+                "operationId": "6f75f515f16c132435a4deec1538411e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar/update/{id}": {
+            "put": {
+                "tags": [
+                    "Kompetensi Dasar"
+                ],
+                "summary": "Update a kompetensi-dasar",
+                "operationId": "8de3523072320cc00fb200c58e29a321",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "silabus_id",
+                                    "materi_pokok",
+                                    "description",
+                                    "kegiatan_pembelajaran",
+                                    "sumber_belajar",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "silabus_id": {
+                                        "type": "string"
+                                    },
+                                    "materi_pokok": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "kegiatan_pembelajaran": {
+                                        "type": "string"
+                                    },
+                                    "sumber_belajar": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "silabus_id": {
+                                            "type": "string"
+                                        },
+                                        "materi_pokok": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "kegiatan_pembelajaran": {
+                                            "type": "string"
+                                        },
+                                        "sumber_belajar": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Kompetensi Dasar"
+                ],
+                "summary": "Delete a kompetensi-dasar",
+                "operationId": "d2db1327d69a04f8c90b49dbb793edf3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kelas ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-detail/list": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dsar Detail"
+                ],
+                "summary": "Retrieve all kompetensi-dasar-details",
+                "operationId": "16a70a42f94da19cd57acc92c3791c74",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-detail/store": {
+            "post": {
+                "tags": [
+                    "Kompetensi Dsar Detail"
+                ],
+                "summary": "Create a new kompetensi-dasar-detail",
+                "operationId": "ff73910b2ff63a1f4c6c6e0a2efdc93f",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kompetensi_dasar_id",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "kompetensi_dasar_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kompetensi_dasar_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-detail/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dsar Detail"
+                ],
+                "summary": "Retrieve a kompetensi-dasar-detail",
+                "operationId": "9b50f2aa6b974fc3992399ae0bfb31dc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-detail ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-detail/update/{id}": {
+            "put": {
+                "tags": [
+                    "Kompetensi Dsar Detail"
+                ],
+                "summary": "Update a kompetensi-dasar-detail",
+                "operationId": "0f411cfde2b05250e6c3b4fa89131d2f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-detail ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kompetensi_dasar_id",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "kompetensi_dasar_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kompetensi_dasar_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-detail/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Kompetensi Dsar Detail"
+                ],
+                "summary": "Delete a kompetensi-dasar-detail",
+                "operationId": "866e9bd8bd81345d208fb51ce9c7c56c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-detail ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-point/list": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dasar Point"
+                ],
+                "summary": "Retrieve all kompetensi-dasar-points",
+                "operationId": "da1ab4589094fb4e14a07fdcda99b807",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-point/store": {
+            "post": {
+                "tags": [
+                    "Kompetensi Dasar Point"
+                ],
+                "summary": "Create a new kompetensi-dasar-point",
+                "operationId": "8b916486ce2aee8200d73d2ebe3a17ce",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kompetensi_dasar_detail_id",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "kompetensi_dasar_detail_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kompetensi_dasar_detail_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-point/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Kompetensi Dasar Point"
+                ],
+                "summary": "Retrieve a kompetensi-dasar-point",
+                "operationId": "08a9daa07105669a3dc10eab722d7e27",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-point ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-point/update/{id}": {
+            "put": {
+                "tags": [
+                    "Kompetensi Dasar Point"
+                ],
+                "summary": "Update a kompetensi-dasar-point",
+                "operationId": "53b14ce6ddbb9544f2b5aeaee17cdefb",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-point ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kompetensi_dasar_detail_id",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "kompetensi_dasar_detail_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kompetensi_dasar_detail_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/kompetensi-dasar-point/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Kompetensi Dasar Point"
+                ],
+                "summary": "Delete a kompetensi-dasar-point",
+                "operationId": "3f0a1d11d5065801a41c1478d3a57c9f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "kompetensi-dasar-point ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/mata-pelajaran/list": {
+            "get": {
+                "tags": [
+                    "Mata Pelajaran"
+                ],
+                "summary": "Retrieve all mata-pelajarans",
+                "operationId": "337dcd1c07d38f3d5ed3abe20e35a8f2",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/mata-pelajaran/store": {
+            "post": {
+                "tags": [
+                    "Mata Pelajaran"
+                ],
+                "summary": "Create a new mata-pelajaran",
+                "operationId": "868183980df2daa31d8aa26235228409",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "jenis_mata_pelajaran_id",
+                                    "sekolah_id",
+                                    "name",
+                                    "singkatan",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "sekolah_id": {
+                                        "type": "string"
+                                    },
+                                    "jenis_mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "singkatan": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "sekolah_id": {
+                                            "type": "string"
+                                        },
+                                        "jenis_mata_pelajaran_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "singkatan": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/mata-pelajaran/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Mata Pelajaran"
+                ],
+                "summary": "Retrieve a mata-pelajaran",
+                "operationId": "9d978713b5f7d2b9e642126329072ce1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/mata-pelajaran/update/{id}": {
+            "put": {
+                "tags": [
+                    "Mata Pelajaran"
+                ],
+                "summary": "Update a mata-pelajaran",
+                "operationId": "1cc2c4233a98632676fcb2e7170530b6",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "jenis_mata_pelajaran_id",
+                                    "sekolah_id",
+                                    "name",
+                                    "singkatan",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "sekolah_id": {
+                                        "type": "string"
+                                    },
+                                    "jenis_mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "singkatan": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "sekolah_id": {
+                                            "type": "string"
+                                        },
+                                        "jenis_mata_pelajaran_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "singkatan": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/mata-pelajaran/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Mata Pelajaran"
+                ],
+                "summary": "Delete a mata-pelajaran",
+                "operationId": "04f2075d64069d328191e6b3dab988d7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "mata-pelajaran ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian/list": {
+            "get": {
+                "tags": [
+                    "Penilaian"
+                ],
+                "summary": "Retrieve all penilaians",
+                "operationId": "03f53780349915ea7b8a991005114951",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian/store": {
+            "post": {
+                "tags": [
+                    "Penilaian"
+                ],
+                "summary": "Create a new penilaian",
+                "operationId": "3e619416bc171276626b89f1e3585e5f",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "type"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "pengetahuan|keterampilan"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Penilaian"
+                ],
+                "summary": "Retrieve a penilaian",
+                "operationId": "fc820b39ae488376f5f4a65c1cc361e1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian/update/{id}": {
+            "put": {
+                "tags": [
+                    "Penilaian"
+                ],
+                "summary": "Update a penilaian",
+                "operationId": "8f9646747d1732006fe36afcd6e822ef",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "type"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "pengetahuan|keterampilan"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Penilaian"
+                ],
+                "summary": "Delete a penilaian",
+                "operationId": "41eff7c5f09d268bbeb4e1b168feab48",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian-silabus/list": {
+            "get": {
+                "tags": [
+                    "Penilaian Silabus"
+                ],
+                "summary": "Retrieve all penilaian-silabuss",
+                "operationId": "938be432f1fad563bebedcb7128ce635",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian-silabus/store": {
+            "post": {
+                "tags": [
+                    "Penilaian Silabus"
+                ],
+                "summary": "Create a new penilaian-silabus",
+                "operationId": "4e9c9f625c75b4798096b13f29bb87e4",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "penilaian_id",
+                                    "silabus_id",
+                                    "name",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "penilaian_id": {
+                                        "type": "string"
+                                    },
+                                    "silabus_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "penilaian_id": {
+                                            "type": "string"
+                                        },
+                                        "silabus_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian-silabus/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Penilaian Silabus"
+                ],
+                "summary": "Retrieve a penilaian-silabus",
+                "operationId": "ae83f9359813bf804e6aa396858b3b7e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian-silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian-silabus/update/{id}": {
+            "put": {
+                "tags": [
+                    "Penilaian Silabus"
+                ],
+                "summary": "Update a penilaian-silabus",
+                "operationId": "04b1803677cfcffd78aa2fd553a7978d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian-silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "penilaian_id",
+                                    "silabus_id",
+                                    "name",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "penilaian_id": {
+                                        "type": "string"
+                                    },
+                                    "silabus_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "penilaian_id": {
+                                            "type": "string"
+                                        },
+                                        "silabus_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/penilaian-silabus/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Penilaian Silabus"
+                ],
+                "summary": "Delete a penilaian-silabus",
+                "operationId": "7856072f7fac8e4bcb251e8cbea1f983",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "penilaian-silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/pertemuan/list": {
+            "get": {
+                "tags": [
+                    "Pertemuan"
+                ],
+                "summary": "Retrieve all pertemuans",
+                "operationId": "59475e460a9a8001338a1ed954ac63df",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/pertemuan/store": {
+            "post": {
+                "tags": [
+                    "Pertemuan"
+                ],
+                "summary": "Create a new pertemuan",
+                "operationId": "e09c637e6905ccac070f69f78de986b5",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/pertemuan/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Pertemuan"
+                ],
+                "summary": "Retrieve a pertemuan",
+                "operationId": "a62a505a983194feeb0539070e5a01ca",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "pertemuan ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/pertemuan/update/{id}": {
+            "put": {
+                "tags": [
+                    "Pertemuan"
+                ],
+                "summary": "Update a pertemuan",
+                "operationId": "82e2ea2fdcacd7b7e7018de8d40245c4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "pertemuan ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/pertemuan/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Pertemuan"
+                ],
+                "summary": "Delete a pertemuan",
+                "operationId": "010f8c4e53b0bead9178d001ea48d072",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "pertemuan ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role/list": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Retrieve all roles",
+                "operationId": "578fc0b2862d188abaf42112cf9ea816",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role/store": {
+            "post": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Create a new role",
+                "operationId": "217d536f741ea073dee6d97e5bb36df9",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "xxx"
+                                ],
+                                "properties": {
+                                    "xxx": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "xxx": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Retrieve a role",
+                "operationId": "bb89cbc9a551d46bda206ba9f609cb77",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Role ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role/update/{id}": {
+            "put": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Update a role",
+                "operationId": "f6da161c8057fb32789ec426171684c8",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Role ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "xxx"
+                                ],
+                                "properties": {
+                                    "xxx": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "xxx": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Delete a role",
+                "operationId": "075c369f028c67f961b5de91f2eb8479",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Role ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rpp/list": {
+            "get": {
+                "tags": [
+                    "RPP"
+                ],
+                "summary": "Retrieve all rpps",
+                "operationId": "cffbc7584983688033f3e965fe20597a",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rpp/store": {
+            "post": {
+                "tags": [
+                    "RPP"
+                ],
+                "summary": "Create a new rpp",
+                "operationId": "3770e70f3a93d26093dec9138878083e",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kelas_id",
+                                    "jadwal_pendidik_id",
+                                    "kompetensi_dasar_id",
+                                    "alokasi_wakktu_id",
+                                    "materi",
+                                    "tujuan",
+                                    "kegiatan",
+                                    "alat",
+                                    "sumber",
+                                    "pendahuluan",
+                                    "penutupan",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "kelas_id": {
+                                        "type": "string"
+                                    },
+                                    "jadwal_pendidik_id": {
+                                        "type": "string"
+                                    },
+                                    "kompetensi_dasar_id": {
+                                        "type": "string"
+                                    },
+                                    "alokasi_waktu_id": {
+                                        "type": "string"
+                                    },
+                                    "materi": {
+                                        "type": "string"
+                                    },
+                                    "tujuan": {
+                                        "type": "string"
+                                    },
+                                    "kegiatan": {
+                                        "type": "string"
+                                    },
+                                    "alat": {
+                                        "type": "string"
+                                    },
+                                    "sumber": {
+                                        "type": "string"
+                                    },
+                                    "pendahuluan": {
+                                        "type": "string"
+                                    },
+                                    "penutupan": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kelas_id": {
+                                            "type": "string"
+                                        },
+                                        "jadwal_pendidik_id": {
+                                            "type": "string"
+                                        },
+                                        "kompetensi_dasar_id": {
+                                            "type": "string"
+                                        },
+                                        "alokasi_waktu_id": {
+                                            "type": "string"
+                                        },
+                                        "materi": {
+                                            "type": "string"
+                                        },
+                                        "tujuan": {
+                                            "type": "string"
+                                        },
+                                        "kegiatan": {
+                                            "type": "string"
+                                        },
+                                        "alat": {
+                                            "type": "string"
+                                        },
+                                        "sumber": {
+                                            "type": "string"
+                                        },
+                                        "pendahuluan": {
+                                            "type": "string"
+                                        },
+                                        "penutupan": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rpp/detail/{id}": {
+            "get": {
+                "tags": [
+                    "RPP"
+                ],
+                "summary": "Retrieve a rpp",
+                "operationId": "15c9353b9a377c051c08365b34a9a8c3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "rpp ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rpp/update/{id}": {
+            "put": {
+                "tags": [
+                    "RPP"
+                ],
+                "summary": "Update a rpp",
+                "operationId": "5aac7efd7576095736d2d6c302dcd3ee",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "rpp ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "kelas_id",
+                                    "jadwal_pendidik_id",
+                                    "kompetensi_dasar_id",
+                                    "alokasi_wakktu_id",
+                                    "materi",
+                                    "tujuan",
+                                    "kegiatan",
+                                    "alat",
+                                    "sumber",
+                                    "pendahuluan",
+                                    "penutupan",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "kelas_id": {
+                                        "type": "string"
+                                    },
+                                    "jadwal_pendidik_id": {
+                                        "type": "string"
+                                    },
+                                    "kompetensi_dasar_id": {
+                                        "type": "string"
+                                    },
+                                    "alokasi_waktu_id": {
+                                        "type": "string"
+                                    },
+                                    "materi": {
+                                        "type": "string"
+                                    },
+                                    "tujuan": {
+                                        "type": "string"
+                                    },
+                                    "kegiatan": {
+                                        "type": "string"
+                                    },
+                                    "alat": {
+                                        "type": "string"
+                                    },
+                                    "sumber": {
+                                        "type": "string"
+                                    },
+                                    "pendahuluan": {
+                                        "type": "string"
+                                    },
+                                    "penutupan": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "kelas_id": {
+                                            "type": "string"
+                                        },
+                                        "jadwal_pendidik_id": {
+                                            "type": "string"
+                                        },
+                                        "kompetensi_dasar_id": {
+                                            "type": "string"
+                                        },
+                                        "alokasi_waktu_id": {
+                                            "type": "string"
+                                        },
+                                        "materi": {
+                                            "type": "string"
+                                        },
+                                        "tujuan": {
+                                            "type": "string"
+                                        },
+                                        "kegiatan": {
+                                            "type": "string"
+                                        },
+                                        "alat": {
+                                            "type": "string"
+                                        },
+                                        "sumber": {
+                                            "type": "string"
+                                        },
+                                        "pendahuluan": {
+                                            "type": "string"
+                                        },
+                                        "penutupan": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rpp/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "RPP"
+                ],
+                "summary": "Delete a rpp",
+                "operationId": "5be19bb4b5ef47a5597fb2704f6bce4a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "rpp ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sekolah/list": {
+            "get": {
+                "tags": [
+                    "Sekolah"
+                ],
+                "summary": "Retrieve all sekolahs",
+                "operationId": "321a1a9d94be927916e1529177480fec",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sekolah/store": {
+            "post": {
+                "tags": [
+                    "Sekolah"
+                ],
+                "summary": "Create a new sekolah",
+                "operationId": "f01b8e1598a8a58337cd7abcc45571e2",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "role_id",
+                                    "name",
+                                    "singkatan",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "role_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "singkatan": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "role_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "singkatan": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sekolah/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Sekolah"
+                ],
+                "summary": "Retrieve a sekolah",
+                "operationId": "bac775c61a03ea202d8426ae0c792e1a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "sekolah ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sekolah/update/{id}": {
+            "put": {
+                "tags": [
+                    "Sekolah"
+                ],
+                "summary": "Update a sekolah",
+                "operationId": "7a831d7b6883a010b5e21ae3bf3f4df6",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Sekolah ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "role_id",
+                                    "name",
+                                    "singkatan",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "role_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "singkatan": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "role_id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "singkatan": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "boolean"
+                                        },
+                                        "created_at": {
+                                            "type": "string"
+                                        },
+                                        "updated_at": {
+                                            "type": "string"
+                                        },
+                                        "deleted_at": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sekolah/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Sekolah"
+                ],
+                "summary": "Delete a sekolah",
+                "operationId": "509a599d0fb1476ad069555bc1521227",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "sekolah ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/silabus/list": {
+            "get": {
+                "tags": [
+                    "Silabus"
+                ],
+                "summary": "Retrieve all silabuss",
+                "operationId": "c1deb8a5fdfe591d408aa6814b446937",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/silabus/store": {
+            "post": {
+                "tags": [
+                    "Silabus"
+                ],
+                "summary": "Create a new silabus",
+                "operationId": "038082d2528c386c75a1d98ebceb82a6",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "sekolah_id",
+                                    "mata_pelajaran_id",
+                                    "kelas_id",
+                                    "name",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "sekolah_id": {
+                                        "type": "string"
+                                    },
+                                    "mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "kelas_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/silabus/detail/{id}": {
+            "get": {
+                "tags": [
+                    "Silabus"
+                ],
+                "summary": "Retrieve a silabus",
+                "operationId": "6a7ee97c883cbe870cbec4c0f068a3c1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/silabus/update/{id}": {
+            "put": {
+                "tags": [
+                    "Silabus"
+                ],
+                "summary": "Update a silabus",
+                "operationId": "ad2609f752d8cb8dfd71f0ca9ee84fca",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "sekolah_id",
+                                    "mata_pelajaran_id",
+                                    "kelas_id",
+                                    "name",
+                                    "description",
+                                    "status"
+                                ],
+                                "properties": {
+                                    "sekolah_id": {
+                                        "type": "string"
+                                    },
+                                    "mata_pelajaran_id": {
+                                        "type": "string"
+                                    },
+                                    "kelas_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/silabus/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Silabus"
+                ],
+                "summary": "Delete a silabus",
+                "operationId": "966561eaacefbebf8eeb7c7bcc74a370",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "silabus ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
